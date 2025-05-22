@@ -5,33 +5,6 @@
   "last_link_id": 35,
   "nodes": [
     {
-      "id": 39,
-      "type": "SaveImage",
-      "pos": [
-        1499.1612548828125,
-        -1.5376778841018677
-      ],
-      "size": [
-        325.0105285644531,
-        377.5579528808594
-      ],
-      "flags": {},
-      "order": 2,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "images",
-          "type": "IMAGE",
-          "link": 35
-        }
-      ],
-      "outputs": [],
-      "properties": {},
-      "widgets_values": [
-        "Seedream-3.0-"
-      ]
-    },
-    {
       "id": 37,
       "type": "DMXAPITextToImage",
       "pos": [
@@ -70,9 +43,9 @@
         "Node name for S&R": "DMXAPITextToImage"
       },
       "widgets_values": [
-        "一个女人，人物写真，模特为一位20-30岁、身高 170cm、体重 110 斤、国字形脸、大眼睛的中国标准女性，留着黑色双麻花辫，面容清秀，身材苗条。她身着白色中式上衣，衣领和盘扣为浅绿色，胸前左上角刺绣着颜色与服装协调的 “MMXaigc” 字母，搭配浅绿色宽松长裤，戴着与服装协调的浅蓝色纯色口罩。模特呈现不同摆拍动作，眼神温柔，展现出清纯气质。背景是广西南宁伊岭岩溶洞，洞内有百万年前形成的钟乳石奇观。画面采用写实摄影风格，运用参考图的滤镜，构图随意，接近手机日常拍摄。",
+        "一个女人，人物写真，中国标准女性，留着黑色双麻花辫。她身着白色中式上衣，衣领和盘扣为浅绿色，胸前左上角刺绣着颜色与服装协调的 “MMXaigc” 字母，搭配浅绿色宽松长裤，戴着与服装协调的浅蓝色纯色口罩。摆拍动作，眼神温柔，展现出清纯气质。背景是溶洞，洞内有百万年前形成的钟乳石奇观。",
         "seedream-3.0",
-        "9:16",
+        "1:1",
         "standard",
         "vivid",
         47439625520328,
@@ -81,11 +54,40 @@
       ]
     },
     {
+      "id": 39,
+      "type": "SaveImage",
+      "pos": [
+        1510.2406005859375,
+        4.470402240753174
+      ],
+      "size": [
+        325.0105285644531,
+        377.5579528808594
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 35
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "Node name for S&R": "SaveImage"
+      },
+      "widgets_values": [
+        "Seedream-3.0-"
+      ]
+    },
+    {
       "id": 38,
       "type": "DMXAPIClient",
       "pos": [
-        602.7266845703125,
-        70.93547058105469
+        601.8235473632812,
+        62.355464935302734
       ],
       "size": [
         332.31793212890625,
@@ -134,11 +136,18 @@
   "groups": [],
   "config": {},
   "extra": {
-    "frontendVersion": "1.18.10",
+    "frontendVersion": "1.19.9",
     "VHS_latentpreview": false,
     "VHS_latentpreviewrate": 0,
     "VHS_MetadataImage": true,
-    "VHS_KeepIntermediate": true
+    "VHS_KeepIntermediate": true,
+    "ds": {
+      "scale": 1.6105100000000014,
+      "offset": [
+        -663.9338649619997,
+        126.02137887012205
+      ]
+    }
   },
   "version": 0.4
 }
