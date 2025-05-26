@@ -1,0 +1,473 @@
+{
+  "id": "9cdfd6e3-7426-4a3a-88b1-b5866725d7e0",
+  "revision": 0,
+  "last_node_id": 180,
+  "last_link_id": 261,
+  "nodes": [
+    {
+      "id": 169,
+      "type": "ImageEdit",
+      "pos": [
+        432.1707763671875,
+        -1168.1309814453125
+      ],
+      "size": [
+        379.3426513671875,
+        197.44866943359375
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "client",
+          "type": "DMX_API_CLIENT",
+          "link": 243
+        },
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 250
+        }
+      ],
+      "outputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "links": [
+            248
+          ]
+        },
+        {
+          "name": "image_url",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageEdit"
+      },
+      "widgets_values": [
+        "把图片中的女人换成男人"
+      ]
+    },
+    {
+      "id": 174,
+      "type": "SaveImage",
+      "pos": [
+        1011.8215942382812,
+        -1189.1424560546875
+      ],
+      "size": [
+        325.6363220214844,
+        270
+      ],
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 248
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "Node name for S&R": "SaveImage"
+      },
+      "widgets_values": [
+        "DMX-%date:yyyy-MM-dd%/ %date:yyyyMMddhhmmss%"
+      ]
+    },
+    {
+      "id": 170,
+      "type": "TextToImage",
+      "pos": [
+        393.0882568359375,
+        -1585.2066650390625
+      ],
+      "size": [
+        400,
+        200
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "client",
+          "type": "DMX_API_CLIENT",
+          "link": 244
+        }
+      ],
+      "outputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "links": [
+            245
+          ]
+        },
+        {
+          "name": "image_url",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "TextToImage"
+      },
+      "widgets_values": [
+        "一个女人，光脚站在月球表面，注视着地球",
+        "seedream-3.0",
+        "4:3"
+      ]
+    },
+    {
+      "id": 168,
+      "type": "ImageMerge",
+      "pos": [
+        417.989990234375,
+        -676.8161010742188
+      ],
+      "size": [
+        400,
+        200
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "client",
+          "type": "DMX_API_CLIENT",
+          "link": 242
+        },
+        {
+          "name": "image1",
+          "type": "IMAGE",
+          "link": 251
+        },
+        {
+          "name": "image2",
+          "type": "IMAGE",
+          "link": 252
+        }
+      ],
+      "outputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "links": [
+            249
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageMerge"
+      },
+      "widgets_values": [
+        "将图片 1 的人物抠出来，并和图片 2 的背景完美融合，使人物看起来自然地站在背景中，保持人物外貌和图片 2 的光影风格一致"
+      ]
+    },
+    {
+      "id": 173,
+      "type": "SaveImage",
+      "pos": [
+        1002.9188842773438,
+        -713.4071655273438
+      ],
+      "size": [
+        325.6363220214844,
+        270
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 249
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "Node name for S&R": "SaveImage"
+      },
+      "widgets_values": [
+        "DMX-%date:yyyy-MM-dd%/ %date:yyyyMMddhhmmss%"
+      ]
+    },
+    {
+      "id": 138,
+      "type": "SaveImage",
+      "pos": [
+        1000.6582641601562,
+        -1597.0755615234375
+      ],
+      "size": [
+        325.6363220214844,
+        270
+      ],
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 245
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "Node name for S&R": "SaveImage"
+      },
+      "widgets_values": [
+        "DMX-%date:yyyy-MM-dd%/ %date:yyyyMMddhhmmss%"
+      ]
+    },
+    {
+      "id": 146,
+      "type": "LoadImage",
+      "pos": [
+        -195.96324157714844,
+        -1230.023681640625
+      ],
+      "size": [
+        270,
+        314
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            250,
+            251
+          ]
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "250428-002 (3).png",
+        "image"
+      ]
+    },
+    {
+      "id": 175,
+      "type": "LoadImage",
+      "pos": [
+        -197.92318725585938,
+        -765.899658203125
+      ],
+      "size": [
+        270,
+        314
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            252
+          ]
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "微信图片_20250430222832.jpg",
+        "image"
+      ]
+    },
+    {
+      "id": 167,
+      "type": "DMXAPIClient",
+      "pos": [
+        -257.52056884765625,
+        -1559.2374267578125
+      ],
+      "size": [
+        392.1009521484375,
+        84.7320556640625
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "client",
+          "type": "DMX_API_CLIENT",
+          "links": [
+            242,
+            243,
+            244
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "DMXAPIClient"
+      },
+      "widgets_values": [
+        "",
+        "www.dmxapi.cn"
+      ]
+    }
+  ],
+  "links": [
+    [
+      242,
+      167,
+      0,
+      168,
+      0,
+      "DMX_API_CLIENT"
+    ],
+    [
+      243,
+      167,
+      0,
+      169,
+      0,
+      "DMX_API_CLIENT"
+    ],
+    [
+      244,
+      167,
+      0,
+      170,
+      0,
+      "DMX_API_CLIENT"
+    ],
+    [
+      245,
+      170,
+      0,
+      138,
+      0,
+      "IMAGE"
+    ],
+    [
+      248,
+      169,
+      0,
+      174,
+      0,
+      "IMAGE"
+    ],
+    [
+      249,
+      168,
+      0,
+      173,
+      0,
+      "IMAGE"
+    ],
+    [
+      250,
+      146,
+      0,
+      169,
+      1,
+      "IMAGE"
+    ],
+    [
+      251,
+      146,
+      0,
+      168,
+      1,
+      "IMAGE"
+    ],
+    [
+      252,
+      175,
+      0,
+      168,
+      2,
+      "IMAGE"
+    ]
+  ],
+  "groups": [
+    {
+      "id": 2,
+      "title": "文生图-seedream-3.0",
+      "bounding": [
+        318.3466491699219,
+        -1722.369384765625,
+        1058.6348876953125,
+        421.4281005859375
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {}
+    },
+    {
+      "id": 3,
+      "title": "图像编辑-gpt-image-1",
+      "bounding": [
+        315.5574951171875,
+        -1275.8709716796875,
+        1058.6348876953125,
+        421.4281005859375
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {}
+    },
+    {
+      "id": 4,
+      "title": "多图编辑-gpt-image-1",
+      "bounding": [
+        310.052490234375,
+        -828.7939453125,
+        1058.6348876953125,
+        421.4281005859375
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {}
+    }
+  ],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 1,
+      "offset": [
+        1001.2086506038725,
+        1879.6932489577232
+      ]
+    },
+    "frontendVersion": "1.18.10",
+    "VHS_latentpreview": false,
+    "VHS_latentpreviewrate": 0,
+    "VHS_MetadataImage": true,
+    "VHS_KeepIntermediate": true
+  },
+  "version": 0.4
+}
