@@ -71,7 +71,8 @@ class TextToImage:
                 "client": ("DMX_API_CLIENT",),
                 "prompt": ("STRING", {"multiline": True, "default": ""}),
                 "model": (["seedream-3.0", "gpt-image-1", "flux-dev", "dall-e-3"], {"default": "seedream-3.0"}),
-                "aspect_ratio": (["16:9", "4:3", "1:1"], {"default": "16:9"}),
+                "width":("STRING",{"default":"1024"}),
+                "height":("STRING",{"default":"1024"}),
             },
         }
 
@@ -81,13 +82,13 @@ class TextToImage:
     OUTPUT_NODE = True
     CATEGORY = GLOBAL_CATEGORY
 
-    def generate(self, client, prompt, model="seedream-3.0", aspect_ratio="16:9"):
+    def generate(self, client, prompt, model="seedream-3.0", width="1024", height="1024"):
         api_endpoint = "/v1/images/generations"
         payload = {
             "prompt": prompt,
             "n": 1,
             "model": model,
-            "aspect_ratio": aspect_ratio,
+            "size":width+"x"+height,
             "prompt_upsampling": True,
             "raw": True,
             "seed": -1
@@ -100,7 +101,6 @@ class TextToImage:
         }
         api_url = f"https://{client.api_host}{api_endpoint}"
         response = requests.post(api_url, json=payload, headers=headers)
-        
         if response.status_code == 200:
             data = response.json()
             if "data" in data and len(data["data"]) > 0 and "url" in data["data"][0]:
