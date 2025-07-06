@@ -71,8 +71,8 @@ class TextToImage:
                 "client": ("DMX_API_CLIENT",),
                 "prompt": ("STRING", {"multiline": True, "default": ""}),
                 "model": (["seedream-3.0", "gpt-image-1", "flux-dev", "dall-e-3"], {"default": "seedream-3.0"}),
-                "width":("STRING",{"default":"1024"}),
-                "height":("STRING",{"default":"1024"}),
+                "width":("INT",{"default":1024}),
+                "height":("INT",{"default":1024}),
             },
         }
 
@@ -82,13 +82,13 @@ class TextToImage:
     OUTPUT_NODE = True
     CATEGORY = GLOBAL_CATEGORY
 
-    def generate(self, client, prompt, model="seedream-3.0", width="1024", height="1024"):
+    def generate(self, client, prompt, model="seedream-3.0", width=1024, height=1024):
         api_endpoint = "/v1/images/generations"
         payload = {
             "prompt": prompt,
             "n": 1,
             "model": model,
-            "size":width+"x"+height,
+            "size":str(width)+"x"+str(height),
             "prompt_upsampling": True,
             "raw": True,
             "seed": -1
